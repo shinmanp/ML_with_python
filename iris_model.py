@@ -21,7 +21,7 @@ iris_df = pd.DataFrame(X_train, columns = iris_dataset.feature_names)
 pd.plotting.scatter_matrix(iris_df, c = y_train, figsize=(15,15), marker='o', hist_kwds={'bins':20}, s=60, alpha=.8)
 plt.show()
 
-## Build model
+## Build model using k nearest neighbor algorithm
 from sklearn.neighbors import KNeighborsClassifier
 knn = KNeighborsClassifier(n_neighbors = 1)
 knn.fit(X_train, y_train)
